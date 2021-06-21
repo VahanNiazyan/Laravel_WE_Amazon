@@ -1,0 +1,62 @@
+
+.products .form-control {
+    width: 40%!important;
+}
+.color-div {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 12;
+}
+.input-check {
+    position: absolute;
+    top: 12px;
+    z-index: -1;
+    margin-left: 4px;
+}
+.new-border {
+    border: 2px solid black;
+}
+
+#images {
+    margin: 15px;
+}
+
+
+.img-div{
+    position: relative;
+    width: 50px;
+    margin: 10px 5px 0;
+    height: 32px;
+}
+
+.img-div i{
+    font-size: 18px;
+    color: red;
+    position: absolute;
+    right: 0;
+    font-weight: 800;
+    cursor: pointer;
+    line-height: 0;
+}
+.img-style {
+    border: 2px solid lightskyblue;
+    cursor: pointer;
+}
+
+.preview img {
+    cursor: pointer;
+    width: 50px;
+    height: 32px;
+    /*margin: 10px 5px 0;*/
+}
+.color-style {
+    border: 2px solid red;
+}
+

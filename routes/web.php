@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\ColorsController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,4 @@ Route::post('/product/update/image/{productId}/{imageId}', [ImagesController::cl
 Route::post('/product/delete/image/{imageId}', [ImagesController::class, 'delete']);
 //Route::post('/product/update/color/{productId}/{id}', [ColorsController::class, 'update']);
 
+Route::get('/myAdmin', [AdminController::class, 'index'])->name('admin-page');

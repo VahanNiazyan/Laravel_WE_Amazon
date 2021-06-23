@@ -22,7 +22,8 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body class="antialiased">
-<div class="ml-4 mt-4"><a href="{{ route('admin-page') }}">Admin</a></div>
+<div class="ml-4 mt-4"><a href="{{ route('admin-page') }}">Login</a></div>
+
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">

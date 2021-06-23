@@ -34,8 +34,9 @@ class UserSeeder extends Seeder
             $user = [
                 'first_name' => $faker->word(),
                 'last_name' => $faker->word(),
-                'email' => $faker->word() . '@gmail.com',
-                'password' => Hash::make('11111111')
+                'email' =>  'user@gmail.com',
+                'password' => Hash::make('1111'),
+                'role' => 'user'
             ];
             DB::table('users')->insert($user);
 //        }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ImagesController;
-use App\Http\Controllers\ColorsController;
+use App\Http\Controllers\ColorController;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -38,6 +38,9 @@ Route::resource('product', ProductController::class);
 
 Route::post('/product/update/image/{productId}/{imageId}', [ImagesController::class, 'update']);
 Route::post('/product/delete/image/{imageId}', [ImagesController::class, 'delete']);
-//Route::post('/product/update/color/{productId}/{id}', [ColorsController::class, 'update']);
+//Route::get('/admin_page', [AdminController::class, 'log_in']);
 
-Route::get('/myAdmin', [AdminController::class, 'index'])->name('admin-page');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin-page');
+Route::post('/admin/login', [AdminController::class, 'log_in'])->name('admin-login');
+
+Route::resource('admin/color', ColorController::class);

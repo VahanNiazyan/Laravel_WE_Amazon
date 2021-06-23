@@ -14,7 +14,8 @@ class ColorController extends Controller
      */
     public function index()
     {
-        //
+        $colors = Color::select('color')->paginate(7);
+        return view('admin.color.index',['colors' => $colors]);
     }
 
     /**
@@ -23,9 +24,18 @@ class ColorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function create(Request $request)
+    {
+        return view('admin.color.create');
+    }
+
     public function store(Request $request)
     {
-        //
+         Color::create([
+            'color' => $request->color
+        ]);
+        return view('admin.color.create')->with('success','product deleted');
+
     }
 
     /**
@@ -36,7 +46,8 @@ class ColorController extends Controller
      */
     public function show(Color $color)
     {
-        //
+        $colors = Color::select('color')->paginate(7);
+        return view('admin.color.index',['colors' => $colors]);
     }
 
     /**
